@@ -27,7 +27,7 @@ class ImageController extends Controller
         $executable = base_path('storage/app/ogg.exe');
 
         // Generate the output filename from the input filename ogg-<filename>.png
-        $outputFilename = 'ogg-' . $file->getClientOriginalName() . '.png';
+        $outputFilename = 'OpenGraph' . $file->hashName();
 
         // Generate the output path from the output filename
         $outputPath = storage_path('app/public/' . $outputFilename);
