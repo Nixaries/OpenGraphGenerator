@@ -28,4 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('/image', [App\Http\Controllers\ImageController::class, 'process'])->name('image.process');
+Route::get('/image', [App\Http\Controllers\ImageController::class, 'index'])->name('image.index');
+
 require __DIR__.'/auth.php';
